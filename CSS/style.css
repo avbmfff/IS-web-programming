@@ -4,77 +4,105 @@ body {
     color: #332518;
 }
 
-h1 {
-    color: #F5B782;
-    font-family: Pribambas, serif;
-    font-size: 72px;
-    text-align: center;
-    background-color: #5C4938;
-    margin-left: 60px; /* Отступ слева в пикселах */
-    margin-right: 10px; /* Отступ справа в пикселах */
-    border-left: 1px solid #999; /* Параметры линии слева */
-    border-bottom: 1px solid #999; /* Параметры линии снизу */
-    padding-left: 10px; /* Отступ от линии слева до текста  */
-    padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+.information{
+    .name {
+        color: #F5B782;
+        font-family: Pribambas, serif;
+        font-size: 72px;
+        text-align: center;
+        background-color: #5C4938;
+        margin-left: 60px; /* Отступ слева в пикселах */
+        margin-right: 10px; /* Отступ справа в пикселах */
+        border-left: 1px solid #999; /* Параметры линии слева */
+        border-bottom: 1px solid #999; /* Параметры линии снизу */
+        padding-left: 10px; /* Отступ от линии слева до текста  */
+        padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+    }
+
+    .slogan{
+        color: #5C4938;
+        font-family: London, serif;
+        font-size: 40px;
+        text-align: right;
+        margin-right: 40px; /* Отступ слева в пикселах */
+        padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+    }
+
+    .link_section{
+        color: #F5B782;
+        font-family: Pribambas, serif;
+        font-size: 50px;
+        text-align: center;
+        background-color: #5C4938;
+        margin-left: 60px; /* Отступ слева в пикселах */
+        margin-right: 10px; /* Отступ справа в пикселах */
+        border-left: 1px solid #999; /* Параметры линии слева */
+        border-bottom: 1px solid #999; /* Параметры линии снизу */
+        padding-left: 15px; /* Отступ от линии слева до текста  */
+        padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+    }
 }
 
-p {
-    color: #332518;
-    font-family: Calibri, serif;
-    font-size: 30px;
-    background-color: #C2A68D;
-    text-align: left;
-    margin-left: 60px;
-    padding-top: 10px; /* Отступ от линии слева до текста  */
-    padding-left: 10px;
-    padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+.description{
+    .reason_question{
+        color: #332518;
+        font-family: Calibri, serif;
+        font-size: 30px;
+        background-color: #C2A68D;
+        text-align: left;
+        margin-left: 60px;
+        padding-top: 10px; /* Отступ от линии слева до текста  */
+        padding-left: 10px;
+        padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+    }
+    .reason_item{
+        color: #332518;
+        font-family: Calibri, serif;
+        font-size: 20px;
+        font-style: italic;
+        margin-left: 60px;
+    }
 }
 
-li {
-    color: #332518;
-    font-family: Calibri, serif;
-    font-size: 20px;
-    font-style: italic;
-    margin-left: 60px;
+.courses{
+    .courses_title{
+        color: #332518;
+        font-family: Calibri, serif;
+        font-size: 30px;
+        background-color: #C2A68D;
+        text-align: left;
+        margin-left: 60px;
+        padding-top: 10px; /* Отступ от линии слева до текста  */
+        padding-left: 10px;
+        padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+    }
+    .courses_menu_item{
+        color: #332518;
+        font-family: Calibri, serif;
+        font-size: 20px;
+        font-style: italic;
+        margin-left: 60px;
+    }
 }
 
-article{
-    color: #5C4938;
-    font-family: London, serif;
-    font-size: 40px;
-    text-align: right;
-    margin-right: 40px; /* Отступ слева в пикселах */
-    padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+.description_image{
+    .image {
+        height: 35%;
+        width: 35%;
+        align-items: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }}
 
-}
-
-nav{
-    color: #F5B782;
-    font-family: Pribambas, serif;
-    font-size: 50px;
-    text-align: center;
-    background-color: #5C4938;
-    margin-left: 60px; /* Отступ слева в пикселах */
-    margin-right: 10px; /* Отступ справа в пикселах */
-    border-left: 1px solid #999; /* Параметры линии слева */
-    border-bottom: 1px solid #999; /* Параметры линии снизу */
-    padding-left: 15px; /* Отступ от линии слева до текста  */
-    padding-bottom: 10px; /* Отступ от линии снизу до текста  */
-}
-
-footer{
-    color: #5C4938;
-    font-family: London, serif;
-    font-size: 20px;
-    background-color: bisque;
-    text-align: center;
-}
-
-img{
-    height: 35%;
-    width: 35%;
-    align-items:  center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.support_links {
+    display: flex;
+    justify-content: center;
+    .support_item{
+        color: #5C4938;
+        text-align: center;
+        font-family: London, serif;
+        font-size: 20px;
+        background-color: bisque;
+    }
 }
