@@ -5,45 +5,63 @@ body {
 }
 
 .information{
-    .name {
-        color: #F5B782;
-        font-family: Pribambas, serif;
-        font-size: 72px;
-        text-align: center;
-        background-color: #5C4938;
-        margin-left: 60px; /* Отступ слева в пикселах */
-        margin-right: 10px; /* Отступ справа в пикселах */
-        border-left: 1px solid #999; /* Параметры линии слева */
-        border-bottom: 1px solid #999; /* Параметры линии снизу */
-        padding-left: 10px; /* Отступ от линии слева до текста  */
-        padding-bottom: 10px; /* Отступ от линии снизу до текста  */
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 60px;
+    margin-right: 10px;
+    border-left: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(45deg, #5C4938 25%, #F5B782 25%, #F5B782 50%, #5C4938 50%, #5C4938 75%, #F5B782 75%);
+    text-stroke: 2px #F5B782; /* добавляем обводку */
+}
 
-    .slogan{
-        color: #5C4938;
-        font-family: London, serif;
-        font-size: 40px;
-        text-align: right;
-        margin-right: 40px; /* Отступ слева в пикселах */
-        padding-bottom: 10px; /* Отступ от линии снизу до текста  */
-    }
+.name {
+    position: absolute;
+    top: 1%;
+    left: 12%;
+    transform: translate(-50%, -50%);
 
-    .link_section{
-        color: #F5B782;
-        font-family: Pribambas, serif;
-        font-size: 50px;
-        text-align: center;
-        background-color: #5C4938;
-        margin-left: 60px; /* Отступ слева в пикселах */
-        margin-right: 10px; /* Отступ справа в пикселах */
-        border-left: 1px solid #999; /* Параметры линии слева */
-        border-bottom: 1px solid #999; /* Параметры линии снизу */
-        padding-left: 15px; /* Отступ от линии слева до текста  */
-        padding-bottom: 10px; /* Отступ от линии снизу до текста  */
-    }
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    font-family: Pribambas, serif;
+    font-size: 72px;
+    text-align: center;
+    -webkit-text-stroke: 1px #5C4955; /* добавляем обводку */
+}
+
+.slogan{
+    display: flex;
+    justify-content: right;
+
+    color: white;
+    font-family: London, serif;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.link_section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-family: Pribambas, serif;
+    font-size: 50px;
+    text-align: center;
+    padding: 15px 0;
+    -webkit-text-stroke: 2px #F5B777; /* добавляем обводку */
 }
 
 .description{
+    display: flex;
+    flex-direction: column;
+
     .reason_question{
         color: #332518;
         font-family: Calibri, serif;
@@ -51,9 +69,9 @@ body {
         background-color: #C2A68D;
         text-align: left;
         margin-left: 60px;
-        padding-top: 10px; /* Отступ от линии слева до текста  */
+        padding-top: 10px;
         padding-left: 10px;
-        padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+        padding-bottom: 10px;
     }
     .reason_item{
         color: #332518;
@@ -65,6 +83,9 @@ body {
 }
 
 .courses{
+    display: flex;
+    flex-direction: column;
+
     .courses_title{
         color: #332518;
         font-family: Calibri, serif;
@@ -72,9 +93,9 @@ body {
         background-color: #C2A68D;
         text-align: left;
         margin-left: 60px;
-        padding-top: 10px; /* Отступ от линии слева до текста  */
+        padding-top: 10px;
         padding-left: 10px;
-        padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+        padding-bottom: 10px;
     }
     .courses_menu_item{
         color: #332518;
@@ -85,19 +106,60 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .description_image .image {
+        display: none;
+    }
+}
+
 .description_image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
     .image {
-        height: 35%;
-        width: 35%;
+        height: 20%;
+        width: 20%;
         align-items: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }}
+    }
+}
+.courses_table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid black;
+    margin: 0 auto; /* Центрирование таблицы */
+}
+
+.courses_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: min-content; /* Размещение строк под другой строкой */
+}
+
+.courses_cell {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.courses_header {
+    font-weight: bold;
+    background-color: lightgray;
+}
+
+
+.courses_odd {
+    background-color: #f2f2f2;
+}
+
+.courses_even {
+    background-color: #e6e6e6;
+}
+
 
 .support_links {
     display: flex;
     justify-content: center;
+
     .support_item{
         color: #5C4938;
         text-align: center;
