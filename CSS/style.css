@@ -106,12 +106,6 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .description_image .image {
-        display: none;
-    }
-}
-
 .description_image{
     display: flex;
     flex-direction: row;
@@ -166,5 +160,13 @@ body {
         font-family: London, serif;
         font-size: 20px;
         background-color: bisque;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .description_image,
+    .description_image .image,
+    .description_image .description {
+        display: none;
     }
 }
