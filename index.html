@@ -4,18 +4,44 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="Website for the selection of online courses, Folder">
     <meta name="description" content="On this site you can publish or enroll in an online course">
-    <title>Folder of you knowledge</title>
+    <title>Folder of your knowledge</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="scripts/loadTimeScript.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentPage = document.location.pathname.split('/').pop().split('.')[0];
+            var menuItems = document.querySelectorAll('.link_section');
+
+            menuItems.forEach(function (item) {
+                item.addEventListener('mouseover', function () {
+                    if (item.id !== currentPage) {
+                        item.classList.add('hover');
+                    }
+                });
+
+                item.addEventListener('mouseout', function () {
+                    item.classList.remove('hover');
+                });
+            });
+
+            menuItems.forEach(function (item) {
+                if (item.id === currentPage) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 
-    <header class="information">
-        <h1 class="name">Folder</h1>
-        <article class="slogan">Просто сделай это.</article>
-        <div class="link_section">Каталог</div>
-        <div class="link_section">Студентам</div>
-        <div class="link_section">Партнёрам</div>
-    </header>
+<header class="information">
+    <h1 class="name">Folder</h1>
+    <article class="slogan">Просто сделай это.</article>
+    <a class="link_section" href="index.html">Главная</a>
+    <a class="link_section" href="courses.html">Каталог</a>
+    <a class="link_section" href="students.html">Студентам</a>
+    <a class="link_section" href="part.html">Партнёрам</a>
+</header>
 
     <main>
 
@@ -84,32 +110,3 @@
     </footer>
 </body>
 </html>
-
-
-<!--
-<section class="courses">
-    <p class="courses_title"><b>Наши курсы</b></p>
-    <div class="courses_table">
-        <div class="courses_row courses_header">
-            <div class="courses_cell">Курс</div>
-            <div class="courses_cell">Цена</div>
-            <div class="courses_cell">Продолжительность</div>
-        </div>
-        <div class="courses_row courses_odd">
-            <div class="courses_cell">Программирование</div>
-            <div class="courses_cell">100$</div>
-            <div class="courses_cell">3 месяца</div>
-        </div>
-        <div class="courses_row courses_even">
-            <div class="courses_cell">Наука</div>
-            <div class="courses_cell">80$</div>
-            <div class="courses_cell">2 месяца</div>
-        </div>
-        <div class="courses_row courses_odd">
-            <div class="courses_cell">Музыка</div>
-            <div class="courses_cell">120$</div>
-            <div class="courses_cell">4 месяца</div>
-        </div>
-    </div>
-</section>
--->

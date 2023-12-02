@@ -18,9 +18,15 @@ body {
     text-stroke: 2px #F5B782; /* добавляем обводку */
 }
 
+.link_section:hover,
+.link_section.hover {
+    background-color: #F5B777; /* Измените цвет, чтобы соответствовать вашему дизайну */
+    color: white; /* Измените цвет текста, чтобы соответствовать вашему дизайну */
+}
+
 .name {
     position: absolute;
-    top: 1%;
+    top: 10%;
     left: 12%;
     transform: translate(-50%, -50%);
 
@@ -118,8 +124,8 @@ body {
     }
 }
 .courses_table {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr 1fr;*/
     border: 1px solid black;
     margin: 0 auto; /* Центрирование таблицы */
 }
@@ -170,3 +176,44 @@ body {
         display: none;
     }
 }
+
+.body {
+    font-family: "Arial", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.information {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.name {
+    margin: 0;
+}
+
+.link_section {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.link_section:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px
+}
+
+.hidden {
+    display: none;
+}
+
