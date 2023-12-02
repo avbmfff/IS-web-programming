@@ -112,6 +112,29 @@ body {
     }
 }
 
+button {
+    background-color: #332518;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #332518;
+}
+
+#printButton {
+    margin-top: 10px;
+}
 .description_image{
     display: flex;
     flex-direction: row;
@@ -215,5 +238,37 @@ main {
 
 .hidden {
     display: none;
+}
+
+#tableContainer {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tableContainer th, #tableContainer td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#tableContainer th {
+    background-color: #5C4938;
+    color: white;
+}
+
+#printButton {
+    margin-top: 10px;
+}
+
+/* Добавленные стили для первого и второго столбцов */
+#tableContainer td:first-child,
+#tableContainer th:first-child {
+    width: 50px; /* Ширина первого столбца */
+}
+
+#tableContainer td:nth-child(2),
+#tableContainer th:nth-child(2) {
+    width: 200px; /* Ширина второго столбца */
 }
 

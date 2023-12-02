@@ -1,5 +1,3 @@
-// scripts/loadTimeScript.js
-
 (function () {
     window.addEventListener('load', function () {
         var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;

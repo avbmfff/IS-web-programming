@@ -6,31 +6,16 @@
     <meta name="description" content="On this site you can publish or enroll in an online course">
     <title>Folder of your knowledge</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        body {
+            background-image: url('images/1625870542_11-kartinkin-com-p-oboi-mnogo-kotikov-krasivie-11.jpg'); /* Replace 'your-background-image.jpg' with the actual image file path */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
     <script src="scripts/loadTimeScript.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var currentPage = document.location.pathname.split('/').pop().split('.')[0];
-            var menuItems = document.querySelectorAll('.link_section');
-
-            menuItems.forEach(function (item) {
-                item.addEventListener('mouseover', function () {
-                    if (item.id !== currentPage) {
-                        item.classList.add('hover');
-                    }
-                });
-
-                item.addEventListener('mouseout', function () {
-                    item.classList.remove('hover');
-                });
-            });
-
-            menuItems.forEach(function (item) {
-                if (item.id === currentPage) {
-                    item.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="scripts/document.js"></script>
 </head>
 <body>
 
@@ -70,9 +55,9 @@
         </section>
 
         <section class="description_image">
-            <img class="image" src="maxresdefault.jpg"/>
-            <img class="image" src="maxresdefault (1).jpg"/>
-            <img class="image" src="maxresdefault.jpg"/>
+            <img class="image" src="images/maxresdefault.jpg"/>
+            <img class="image" src="images/maxresdefault%20(1).jpg"/>
+            <img class="image" src="images/maxresdefault.jpg"/>
         </section>
 
         <section class="courses">
