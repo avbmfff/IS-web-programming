@@ -4,24 +4,24 @@ body {
     color: #332518;
 }
 
-.information{
+.information {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 60px;
     margin-right: 10px;
-    border-left: 1px solid #999;
-    border-bottom: 1px solid #999;
+    border-left: 1px solid #5C4938;
+    border-bottom: 1px solid #5C4938;
     padding-left: 10px;
     padding-bottom: 10px;
-    background-image: linear-gradient(45deg, #5C4938 25%, #F5B782 25%, #F5B782 50%, #5C4938 50%, #5C4938 75%, #F5B782 75%);
-    text-stroke: 2px #F5B782; /* добавляем обводку */
+    color: #332518;
+    text-stroke: 2px #F5B782;
 }
 
 .link_section:hover,
 .link_section.hover {
-    background-color: #F5B777; /* Измените цвет, чтобы соответствовать вашему дизайну */
-    color: white; /* Измените цвет текста, чтобы соответствовать вашему дизайну */
+    background-color: #F5B777;
+    color: white;
 }
 
 .name {
@@ -37,7 +37,7 @@ body {
     font-family: Pribambas, serif;
     font-size: 72px;
     text-align: center;
-    -webkit-text-stroke: 1px #5C4955; /* добавляем обводку */
+    -webkit-text-stroke: 1px #5C4955;
 }
 
 .slogan{
@@ -61,12 +61,13 @@ body {
     font-size: 50px;
     text-align: center;
     padding: 15px 0;
-    -webkit-text-stroke: 2px #F5B777; /* добавляем обводку */
+    -webkit-text-stroke: 2px #F5B777;
 }
 
 .description{
     display: flex;
     flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
 
     .reason_question{
         color: #332518;
@@ -147,16 +148,14 @@ button:hover {
     }
 }
 .courses_table {
-    /*display: grid;*/
-    /*grid-template-columns: 1fr 1fr 1fr;*/
     border: 1px solid black;
-    margin: 0 auto; /* Центрирование таблицы */
+    margin: 0 auto;
 }
 
 .courses_row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: min-content; /* Размещение строк под другой строкой */
+    grid-auto-rows: min-content;
 }
 
 .courses_cell {
@@ -207,7 +206,7 @@ button:hover {
 }
 
 .information {
-    background-color: #333;
+    background-color: #5C4432;
     color: white;
     text-align: center;
     padding: 10px;
@@ -261,14 +260,33 @@ main {
     margin-top: 10px;
 }
 
-/* Добавленные стили для первого и второго столбцов */
 #tableContainer td:first-child,
 #tableContainer th:first-child {
-    width: 50px; /* Ширина первого столбца */
+    width: 50px;
 }
 
 #tableContainer td:nth-child(2),
 #tableContainer th:nth-child(2) {
-    width: 200px; /* Ширина второго столбца */
+    width: 200px;
 }
 
+.contact-info{
+    color: #332518;
+    font-family: Calibri, serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-top: 20px;
+}
+
+.support_item {
+    color: #2ecc71;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+.support_item:hover {
+    transform: scale(1.1);
+}

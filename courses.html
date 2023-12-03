@@ -1,39 +1,130 @@
-<!-- courses.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <header class="information">
-        <h1 class="name">Folder</h1>
-        <article class="slogan">Просто сделай это.</article>
-        <a class="link_section" href="index.html">Главная</a>
-        <a class="link_section" href="courses.html">Каталог</a>
-        <a class="link_section" href="#">Студентам</a>
-        <a class="link_section" href="#">Партнёрам</a>
-    </header>
     <meta charset="UTF-8">
     <meta name="keywords" content="Website for the selection of online courses, Folder">
     <meta name="description" content="On this site you can publish or enroll in an online course">
     <title>Folder of your knowledge - Курсы</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <script src="scripts/loadTimeScript.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var currentPage = document.location.pathname.split('/').pop().split('.')[0];
-            var menuItems = document.querySelectorAll('.link_section');
+    <link rel="stylesheet" href="CSS/course_style.css">
+    <style>
+        body {
+            background-image: url('images/1625870542_11-kartinkin-com-p-oboi-mnogo-kotikov-krasivie-11.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
 
-            menuItems.forEach(function (item) {
-                if (item.id === currentPage) {
-                    item.classList.add('active');
-                }
-            });
-        });
-    </script>
+    </style>
 </head>
 <body>
+
+<header class="information">
+    <a class="link_section" href="index.html">Главная</a>
+</header>
+
+<div class="course-container">
+    <div class="course-card" onclick="toggleDescription(this)">
+        <img class="course-image" src="images/courses/music.jpg" alt="Музыка">
+        <div class="course-caption">Музыка</div>
+        <div class="course-description">
+            <h2>Гитара</h2>
+            <p>Уроки гитары для начинающих. 3 часа в неделю интенсива по аккордам.</p>
+            <p>Продолжительность: 6 месяцев</p>
+            <p>Интенсив: 3 часа в неделю</p>
+            <p>Стоимость: $600</p>
+            <p>Преподаватель: Иван Иванов</p>
+            <p>Связь с преподавателем: <a href="mailto:ivan.ivanov@example.com">ivan.ivanov@example.com</a></p>
+        </div>
+    </div>
+
+    <div class="course-card" onclick="toggleDescription(this)">
+        <img class="course-image" src="images/courses/programming.jpg" alt="Программирование">
+        <div class="course-caption">Программирование</div>
+        <div class="course-description">
+            <h2>Java</h2>
+            <p>12 часов в неделю интенсива по Spring.</p>
+            <p>Продолжительность: 1 месяц</p>
+            <p>Интенсив: 12 часов в неделю</p>
+            <p>Стоимость: $100</p>
+            <p>Преподаватель: Омар Омаров</p>
+            <p>Связь с преподавателем: <a href="mailto:omar.omarov@example.com">omar.omarov@example.com</a></p>
+        </div>
+    </div>
+
+    <div class="course-card" onclick="toggleDescription(this)">
+        <img class="course-image" src="images/courses/sport.jpg" alt="Спорт">
+        <div class="course-caption">Фигурное катание</div>
+        <div class="course-description">
+            <h2>Фигурное катание</h2>
+            <p>Изучите технику и грацию фигурного катания на нашем интенсиве.</p>
+            <p>Продолжительность: 8 недель</p>
+            <p>Интенсив: 10 часов в неделю</p>
+            <p>Стоимость: $120</p>
+            <p>Преподаватель: Елена Петрова</p>
+            <p>Связь с преподавателем: <a href="mailto:elena.petrova@example.com">elena.petrova@example.com</a></p>
+        </div>
+    </div>
+
+    <div class="course-card" onclick="toggleDescription(this)">
+        <img class="course-image" src="images/courses/art.jpg" alt="Рисование">
+        <div class="course-caption">Пейзажи акварелью</div>
+        <div class="course-description">
+            <h2>Рисование</h2>
+            <p>Создайте свои шедевры, изучая тонкости акварельного рисования.</p>
+            <p>Продолжительность: 6 недель</p>
+            <p>Интенсив: 8 часов в неделю</p>
+            <p>Стоимость: $90</p>
+            <p>Преподаватель: Анна Смирнова</p>
+            <p>Связь с преподавателем: <a href="mailto:anna.smirnova@example.com">anna.smirnova@example.com</a></p>
+        </div>
+    </div>
+
+    <div class="course-card" onclick="toggleDescription(this)">
+        <img class="course-image" src="images/courses/chemistry.jpg" alt="Химия">
+        <div class="course-caption">Химические опыты</div>
+        <div class="course-description">
+            <h2>Химия</h2>
+            <p>Погрузитесь в мир химических реакций.</p>
+            <p>Продолжительность: 10 недель</p>
+            <p>Интенсив: 12 часов в неделю</p>
+            <p>Стоимость: $150</p>
+            <p>Преподаватель: Дмитрий Иванов</p>
+            <p>Связь с преподавателем: <a href="mailto:dmitriy.ivanov@example.com">dmitriy.ivanov@example.com</a></p>
+        </div>
+    </div>
+
+    <div class="course-card" onclick="toggleDescription(this)">
+        <img class="course-image" src="images/courses/dance.jpg" alt="Танцы">
+        <div class="course-caption">Балетная осанка</div>
+        <div class="course-description">
+            <h2>Танцы</h2>
+            <p>Освойте технику балетной осанки с нашим интенсивом.</p>
+            <p>Продолжительность: 2 месяца</p>
+            <p>Интенсив: 15 часов в неделю</p>
+            <p>Стоимость: $200</p>
+            <p>Преподаватель: Мария Лебедева</p>
+            <p>Связь с преподавателем: <a href="mailto:maria.lebedeva@example.com">maria.lebedeva@example.com</a></p>
+        </div>
+    </div>
+</div>>
 
 <footer class="support_links">
     <a class="support_item" href="https://vk.com/anna_borzdun">Связь с поддержкой</a>
 </footer>
+
+<script>
+    function toggleDescription(card) {
+        var isActive = card.classList.contains('active');
+
+        document.querySelectorAll('.course-card').forEach(function (item) {
+            item.classList.remove('active');
+        });
+        if (!isActive) {
+            card.classList.add('active');
+        }
+    }
+</script>
 
 </body>
 </html>

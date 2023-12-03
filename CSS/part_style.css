@@ -1,0 +1,16 @@
+.parthner_image {
+    position: marker;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.parthner_image:hover .image {
+    transform: scale(1.1);
+}

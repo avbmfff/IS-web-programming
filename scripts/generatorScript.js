@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('language').value = storedLanguage;
 
     function generateAndDisplayTable() {
-        // Получите значения формы
         const weekdays = parseInt(document.getElementById('weekdays').value);
         const maxLessons = document.getElementById('maxLessons').value;
         const language = document.getElementById('language').value;

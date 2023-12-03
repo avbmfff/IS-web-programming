@@ -1,8 +1,85 @@
-<style>
-    body {
-        background-image: url('images/1625870542_11-kartinkin-com-p-oboi-mnogo-kotikov-krasivie-11.jpg'); /* Replace 'your-background-image.jpg' with the actual image file path */
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Website for the selection of online courses, Folder">
+    <meta name="description" content="On this site, you can publish or enroll in an online course">
+    <title>Folder of your knowledge</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/part_style.css">
+
+    <style>
+        body {
+            background-image: url('images/1625870542_11-kartinkin-com-p-oboi-mnogo-kotikov-krasivie-11.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #5C4432;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #332518;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #C2A68D;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+    <script src="scripts/loadTimeScript.js"></script>
+    <script src="scripts/document.js"></script>
+</head>
+<body>
+
+<header class="information">
+    <a class="link_section" href="index.html">Главная</a>
+</header>
+
+<main>
+    <section class="description">
+        <p class="reason_question"><b>Как с нами связаться?</b></p>
+        <section class="contact-info">
+            <p>
+                Если вы хотите добавить свои курсы на наш сайт или предложить свои услуги репетиторства, то пожалуйста, свяжитесь с нами по почте
+                <a href="mailto:borzdunanna@gmail.com">borzdunanna@gmail.com</a>.
+            </p>
+        </section>
+    </section>
+
+    <section class="parthner_image">
+        <img class="image" src="images/courses/parthners.jpg"/>
+    </section>
+</main>
+
+<footer class="support_links">
+    <a class="support_item" href="https://vk.com/anna_borzdun">Связь с поддержкой</a>
+</footer>
+
+</body>
+</html>
