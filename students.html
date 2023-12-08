@@ -6,55 +6,136 @@
     <meta name="description" content="Web-form to generate tables based on user input">
     <title>Website Constructor Generator</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/students.css">
     <style>
         body {
             background-image: url('images/1625870542_11-kartinkin-com-p-oboi-mnogo-kotikov-krasivie-11.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            margin-top: 5px;
+        }
+
+        #lessonMenu {
+            display: none;
+        }
+
+        #lessonMenu.visible {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
     </style>
-    <script src="scripts/generatorScript.js" defer></script>
 </head>
 <body>
 
 <header class="information">
     <a class="link_section" href="index.html">Главная</a>
+    <a class="link_section" href="courses.html">Каталог</a>
+    <a class="link_section" href="students.html">Студентам</a>
+    <a class="link_section" href="part.html">Партнёрам</a>
 </header>
 
-<main>
-    <form id="tableForm">
-        <label for="weekdays">Дни недели:</label>
-        <select id="weekdays" name="weekdays">
-            <option value="5">5-дневная неделя</option>
-            <option value="6">6-дневная неделя</option>
-        </select>
+<div class="form-container">
+    <label for="weekdays">Выберите дни недели:</label>
+    <select id="weekdays">
+        <option value="5">5-дневная неделя</option>
+        <option value="6">6-дневная неделя</option>
+    </select>
 
-        <label for="maxLessons">Максимальное количество занятий:</label>
-        <input type="number" id="maxLessons" name="maxLessons" min="1" max="10" value="5">
+    <label for="language">Выберите язык таблицы:</label>
+    <select id="language">
+        <option value="ru">Русский</option>
+        <option value="en">English</option>
+    </select>
 
-        <label for="language">Язык таблицы:</label>
-        <select id="language" name="language">
-            <option value="Русский">Русский</option>
-            <option value="English">English</option>
-        </select>
+    <label for="lessons">Выберите количество уроков:</label>
+    <select id="lessons">
+        <option value="3">3 урока</option>
+        <option value="4">4 урока</option>
+        <option value="5">5 уроков</option>
+        <option value="6">6 уроков</option>
+    </select>
 
-        <button type="submit">Создать таблицу</button>
-    </form>
+    <div class="button-container">
+        <button onclick="generateTable()">Создать таблицу</button>
+        <button onclick="clearTable()">Очистить таблицу</button>
+    </div>
 
-    <div id="tableContainer" class="hidden"></div>
-    <button type="button" id="printButton">Распечатать</button>
-</main>
+    <div id="lessonMenu">
+        <label for="subject">Введите название предмета:</label>
+        <input type="text" id="subject">
 
-<footer class="support_links">
-    <a class="support_item" href="https://vk.com/anna_borzdun">Связь с поддержкой</a>
-</footer>
+        <label for="day">Выберите день недели:</label>
+        <select id="day"></select>
 
-<script>
-    document.getElementById('printButton').addEventListener('click', function () {
-        window.print();
-    });
-</script>
+        <label for="lessonNumber">Введите номер урока:</label>
+        <input type="number" id="lessonNumber" min="1">
+        <p class="warning" id="lessonWarning"></p>
+
+        <button onclick="addSubject()">Добавить предмет</button>
+        <button onclick="deleteSubject()">Удалить урок</button>
+    </div>
+</div>
+
+<div class="table-container">
+    <table id="timetable" border="1">
+        <thead>
+        <tr>
+            <th>Дни недели</th>
+            <th>Список уроков</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <p id="modalText"></p>
+        <button onclick="closeModal()">OK</button>
+    </div>
+</div>
+
+<script src="scripts/table.js"></script>
 
 </body>
 </html>

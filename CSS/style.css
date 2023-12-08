@@ -18,6 +18,10 @@ body {
     text-stroke: 2px #F5B782;
 }
 
+.link_section.active {
+    color: #F5B782;
+}
+
 .link_section:hover,
 .link_section.hover {
     background-color: #F5B777;
