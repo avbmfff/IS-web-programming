@@ -16,6 +16,20 @@
     </style>
     <script src="scripts/loadTimeScript.js"></script>
     <script src="scripts/document.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var url = window.location.pathname;
+            var filename = url.substring(url.lastIndexOf('/') + 1);
+            var links = document.querySelectorAll(".link_section");
+
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                if (link.getAttribute("href") === filename) {
+                    link.classList.add("active");
+                }
+            }
+        });
+    </script>
 </head>
 <body>
 

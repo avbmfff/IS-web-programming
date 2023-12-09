@@ -16,15 +16,34 @@
         }
 
     </style>
+    <script src="scripts/loadTimeScript.js"></script>
+    <script src="scripts/document.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var url = window.location.pathname;
+            var filename = url.substring(url.lastIndexOf('/') + 1);
+            var links = document.querySelectorAll(".link_section");
+
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                if (link.getAttribute("href") === filename) {
+                    link.classList.add("active");
+                }
+            }
+        });
+    </script>
 </head>
 <body>
 
 <header class="information">
+    <h1 class="name">Folder</h1>
+    <article class="slogan">Просто сделай это.</article>
     <a class="link_section" href="index.html">Главная</a>
     <a class="link_section" href="courses.html">Каталог</a>
     <a class="link_section" href="students.html">Студентам</a>
     <a class="link_section" href="part.html">Партнёрам</a>
 </header>
+
 
 <div class="course-container">
     <div class="course-card" onclick="toggleDescription(this)">

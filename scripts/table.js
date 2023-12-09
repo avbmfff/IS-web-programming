@@ -130,3 +130,16 @@ function showModal(text) {
 function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
+
+function printTable() {
+    var printWindow = window.open('', '_blank');
+    var tableContent = document.getElementById("timetable").outerHTML;
+
+    printWindow.document.open();
+    printWindow.document.write('<html><head><title>Print Table</title></head><body>');
+    printWindow.document.write(tableContent);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+
+    printWindow.print();
+}

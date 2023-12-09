@@ -54,10 +54,26 @@
     </style>
     <script src="scripts/loadTimeScript.js"></script>
     <script src="scripts/document.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var url = window.location.pathname;
+            var filename = url.substring(url.lastIndexOf('/') + 1);
+            var links = document.querySelectorAll(".link_section");
+
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                if (link.getAttribute("href") === filename) {
+                    link.classList.add("active");
+                }
+            }
+        });
+    </script>
 </head>
 <body>
 
 <header class="information">
+    <h1 class="name">Folder</h1>
+    <article class="slogan">Просто сделай это.</article>
     <a class="link_section" href="index.html">Главная</a>
     <a class="link_section" href="courses.html">Каталог</a>
     <a class="link_section" href="students.html">Студентам</a>
@@ -69,7 +85,7 @@
         <p class="reason_question"><b>Как с нами связаться?</b></p>
         <section class="contact-info">
             <p>
-                Если вы хотите добавить свои курсы на наш сайт или предложить свои услуги репетиторства, то пожалуйста, свяжитесь с нами по почте
+                Если вы хотите добавить свои курсы на наш сайт или предложить свои услуги репетиторства, то, пожалуйста, свяжитесь с нами по почте
                 <a href="mailto:borzdunanna@gmail.com">borzdunanna@gmail.com</a>.
             </p>
         </section>
