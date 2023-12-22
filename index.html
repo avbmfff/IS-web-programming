@@ -6,16 +6,27 @@
     <meta name="description" content="On this site you can publish or enroll in an online course">
     <title>Folder of your knowledge</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <style>
-        body {
-            background-image: url('images/1625870542_11-kartinkin-com-p-oboi-mnogo-kotikov-krasivie-11.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="CSS/swiper.css" />
     <script src="scripts/loadTimeScript.js"></script>
     <script src="scripts/document.js"></script>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kzgXjS1Y6FVBB8vFvnyc_N3YnMXg7470pSKh-rza39RZc_LWqpqbwEoDulZCUSIBrZUNOohj8ACgctUCsM5nDg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9zd2lwZXJqcy5jb20vZGVtb3MvMTMwLWNlbnRlcmVkL2NvcmU"/><style>
+    html,
+
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background-image: url('images/1625870542_11-kartinkin-com-p-oboi-mnogo-kotikov-krasivie-11.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var url = window.location.pathname;
@@ -104,6 +115,46 @@
 
     </main>
 
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="images/courses/art.jpg" alt="Art Course">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/courses/chemistry.jpg" alt="Chemistry Course">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/courses/dance.jpg" alt="Dance Course">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/courses/music.jpg" alt="Music Course">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/courses/parthners.jpg" alt="Partners Course">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/courses/programming.jpg" alt="Programming Course">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/courses/sport.jpg" alt="Sport Course">
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
     <footer class="support_links">
         <a class="support_item" href="https://vk.com/anna_borzdun">Связь с поддержкой</a>
     </footer>

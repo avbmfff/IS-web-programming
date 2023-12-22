@@ -26,7 +26,7 @@
         }
 
         a {
-            color: #332518;
+            color: #5C4432;
             text-decoration: none;
             transition: color 0.3s ease-in-out;
         }
@@ -51,23 +51,24 @@
             justify-content: center;
         }
 
+        .preloader {
+            background: url('images/catwanttosleep.gif') center center no-repeat;
+            background-size: contain;
+            width: 100px;
+            height: 100px;
+            animation: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
     </style>
+
     <script src="scripts/loadTimeScript.js"></script>
     <script src="scripts/document.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var url = window.location.pathname;
-            var filename = url.substring(url.lastIndexOf('/') + 1);
-            var links = document.querySelectorAll(".link_section");
-
-            for (var i = 0; i < links.length; i++) {
-                var link = links[i];
-                if (link.getAttribute("href") === filename) {
-                    link.classList.add("active");
-                }
-            }
-        });
-    </script>
+    <script src="scripts/fetchDataScript.js"></script>
 </head>
 <body>
 
@@ -94,6 +95,15 @@
     <section class="parthner_image">
         <img class="image" src="images/courses/parthners.jpg"/>
     </section>
+
+    <section class="comments">
+        <h2 style="text-align: center;">Комментарии - Отзывы</h2>
+        <ul id="commentsList"></ul>
+    </section>
+
+    <div class="preloader-wrapper">
+        <div class="preloader"></div>
+    </div>
 </main>
 
 <footer class="support_links">
