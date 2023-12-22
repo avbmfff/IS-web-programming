@@ -4,60 +4,163 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="Website for the selection of online courses, Folder">
     <meta name="description" content="On this site you can publish or enroll in an online course">
-    <title>Folder of you knowledge</title>
-    <link rel="stylesheet" href="cssoutline-prototype-safe.css">
+    <title>Folder of your knowledge</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Подключение библиотеки Swiper для карусели с изображениями -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="CSS/swiper.css" />
+    <script src="scripts/loadTimeScript.js"></script>
+    <script src="scripts/document.js"></script>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kzgXjS1Y6FVBB8vFvnyc_N3YnMXg7470pSKh-rza39RZc_LWqpqbwEoDulZCUSIBrZUNOohj8ACgctUCsM5nDg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9zd2lwZXJqcy5jb20vZGVtb3MvMTMwLWNlbnRlcmVkL2NvcmU"/><style>
+    html,
+
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background-image: url('images/1625870542_11-kartinkin-com-p-oboi-mnogo-kotikov-krasivie-11.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var url = window.location.pathname;
+            var filename = url.substring(url.lastIndexOf('/') + 1);
+            var links = document.querySelectorAll(".link_section");
+
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                if (link.getAttribute("href") === filename) {
+                    link.classList.add("active");
+                }
+            }
+        });
+    </script>
 </head>
 <body>
 
-    <header>
-        <h1>Folder</h1>
-        <article>Просто сделай это.</article>
-        <nav>Каталог</nav>
-        <nav>Студентам</nav>
-        <nav>Партнёрам</nav>
-    </header>
+<header class="information">
+    <h1 class="name">Folder</h1>
+    <article class="slogan">Просто сделай это.</article>
+    <a class="link_section" href="index.html">Главная</a>
+    <a class="link_section" href="courses.html">Каталог</a>
+    <a class="link_section" href="students.html">Студентам</a>
+    <a class="link_section" href="part.html">Партнёрам</a>
+</header>
 
     <main>
-        <section>
-            <p><b>Почему именно мы?</b></p>
-            <ol>
-                <li>Связь напрямую с преподавателем</li>
-                <li>Возможность офлайн и онлайн занятий</li>
-                <li>Научишься мыслить на 2<sup>10</sup> быстрее</li>
-                <li><q>Ученье свет, а неученье - тьма</q></li>
+
+        <section class="description">
+            <p class="reason_question"><b>Почему именно мы?</b></p>
+            <ol class="reason">
+                <li class="reason_item">Связь напрямую с преподавателем</li>
+                <li class="reason_item">Возможность офлайн и онлайн занятий</li>
+                <li class="reason_item">Научишься мыслить на 2<sup>10</sup> быстрее</li>
+                <li class="reason_item"><q>Ученье свет, а неученье - тьма</q></li>
             </ol>
         </section>
 
-        <section>
-            <h2>О нас...</h2>
-            <pre><code>
-                #include Fight_Club
-            </code></pre>
-            <h5>Первое правило <s>бойцовского клуба</s>...</h5>
-            <h6>...никому не рассказывать о Бойцовском клубе</h6>
-            <pre>
-                ( •_•)⠀⠀⠀⠀(•_• ) ⠀⠀⠀⠀⠀
-                ( ง )ง ⠀⠀ ୧( ୧ ) ⠀⠀⠀
-                /︶\⠀⠀⠀⠀⠀  /︶\
-            </pre>
-        </section>
+        <section class="courses">
+            <p class="courses_title"><b>Наши курсы</b></p>
+            <ul class="courses_menu">
+                <li class="courses_menu_item">Программирование</li>
+                <li class="courses_menu_item">Наука</li>
+                <li class="courses_menu_item">Музыка</li>
 
-        <section>
-            <h3><u>Курсы, которые мы предлагаем</u></h3>
-            <ul>
-                <li>Программирование</li>
-                <li>Наука</li>
-                <li>Музыка</li>
-                <li>Искусство</li>
-                <li>Танцы</li>
-                <li>Спорт</li>
+                <li class="courses_menu_item">Искусство</li>
+                <li class="courses_menu_item">Танцы</li>
+                <li class="courses_menu_item">Спорт</li>
             </ul>
 
         </section>
+
+        <section class="description_image">
+            <img class="image" src="images/maxresdefault.jpg"/>
+            <img class="image" src="images/maxresdefault%20(1).jpg"/>
+            <img class="image" src="images/maxresdefault.jpg"/>
+        </section>
+
+        <section class="courses">
+            <p class="courses_title"><b>Наши курсы</b></p>
+            <div class="courses_table">
+                <table class="courses_table">
+                    <tr class="courses_row courses_header">
+                        <td class="courses_cell">Курс</td>
+                        <td class="courses_cell">Цена</td>
+                        <td class="courses_cell">Продолжительность</td>
+                    </tr>
+                    <tr class="courses_row courses_odd">
+                        <td class="courses_cell">Программирование</td>
+                        <td class="courses_cell">100$</td>
+                        <td class="courses_cell">3 месяца</td>
+                    </tr>
+                    <tr class="courses_row courses_even">
+                        <td class="courses_cell">Наука</td>
+                        <td class="courses_cell">80$</td>
+                        <td class="courses_cell">2 месяца</td>
+                    </tr>
+                    <tr class="courses_row courses_odd">
+                        <td class="courses_cell">Музыка</td>
+                        <td class="courses_cell">120$</td>
+                        <td class="courses_cell">4 месяца</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <a href="https://vk.com/anna_borzdun">Связь с поддержкой</a>
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="images/courses/art.jpg" alt="Art Course">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/courses/chemistry.jpg" alt="Chemistry Course">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/courses/dance.jpg" alt="Dance Course">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/courses/music.jpg" alt="Music Course">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/courses/parthners.jpg" alt="Partners Course">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/courses/programming.jpg" alt="Programming Course">
+        </div>
+        <div class="swiper-slide">
+            <img src="images/courses/sport.jpg" alt="Sport Course">
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Подключение библиотеки Swiper для карусели в конце документа -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Инициализация и настройка карусели Swiper -->
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,            // Отображение 4 слайдов одновременно
+        spaceBetween: 30,            // Расстояние между слайдами
+        centeredSlides: true,        // Выравнивание слайдов по центру
+        pagination: {
+            el: ".swiper-pagination", // Элемент для отображения пагинации
+            clickable: true,          // Возможность переключения по клику на пагинацию
+        },
+    });
+</script>
+    <footer class="support_links">
+        <a class="support_item" href="https://vk.com/anna_borzdun">Связь с поддержкой</a>
     </footer>
 </body>
 </html>
