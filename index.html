@@ -6,6 +6,7 @@
     <meta name="description" content="On this site you can publish or enroll in an online course">
     <title>Folder of your knowledge</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <!-- Подключение библиотеки Swiper для карусели с изображениями -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="CSS/swiper.css" />
     <script src="scripts/loadTimeScript.js"></script>
@@ -142,16 +143,19 @@
     <div class="swiper-pagination"></div>
 </div>
 
+<!-- Подключение библиотеки Swiper для карусели в конце документа -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Инициализация и настройка карусели Swiper -->
 
 <script>
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        centeredSlides: true,
+        slidesPerView: 4,            // Отображение 4 слайдов одновременно
+        spaceBetween: 30,            // Расстояние между слайдами
+        centeredSlides: true,        // Выравнивание слайдов по центру
         pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+            el: ".swiper-pagination", // Элемент для отображения пагинации
+            clickable: true,          // Возможность переключения по клику на пагинацию
         },
     });
 </script>
